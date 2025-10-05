@@ -1,0 +1,62 @@
+
+
+Learn about how data should be stored on disks
+
+FAT32 - Windows, USB drives, cameras, cross-platform - Very compatible, but old; small file/volume limits
+
+NTFS - Windows PCs - Modern, secure, supports large files, permissions, journaling
+
+ext4 - Linux - Efficient, fast, supports large files, permissions, journaling
+
+APFS - macOS, iOS - Optimized for SSDs, secure, snapshots, clones
+
+
+----------------------------------------------------------------------------
+
+Understand what it means by "deleted" means at a storage level (data is often still there until overwritten)
+
+FAT32: Deletes the entry in the File Allocation Table -> clusters marked free, but contents remain until overwriten
+
+NTFS: Removes the record from the Master File Table (MFT) and flags clusters as available, but actual data in clusters stays
+
+ext4: Inode entries are unlinked from the directory. Data blocks are still on disk until overwritten
+
+APFS: File record in the B-tree is removed, but actual blocks aren't zeroed until needed again
+
+----------------------------------------------------------------------------
+
+Why recovery works
+
+Because the raw 1s and 0s are still present, forensic or recovery tools (like Autopsy, TestDisk, Sleuth Kit) can scan the disk directly and reconstruct files as long as the data blocks haven't been reused
+
+Think of it like library index card:
+
+Deleting a file = ripping out the index card
+
+The book (data) is still on the shelf until someone replaces it wit a new book (overwriting)
+
+----------------------------------------------------------------------------
+
+SSDs vs HDDs (extra twist)
+
+On HDDs: Deleted data usually lingers until overwritten -> earsire recovery
+
+On SSDs: The TRIM command may actively wipe free blocks to optimize performance. The means deleted data is much less recoverable on modern SSDs
+
+----------------------------------------------------------------------------
+
+Secure deletion
+
+To truly destroy data:
+
+Overwrite the blocks (with shred, dd, or disk wipe utilities)
+
+Encrypt the disk from the start (then deleting keys renders data unreadable)
+
+----------------------------------------------------------------------------
+
+Summary
+
+Deleted  =/= "gone". It means the OS stopped keeping track of the file and marked its space are reusable. The data remains until gets overwritten, unless SSD TRIM wipes it earlier
+
+
