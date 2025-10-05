@@ -29,11 +29,11 @@ Tools will parse data for me, but I'll need to interpret it.
 
 For example:
 
-    - "I see a browser history record...what does it mean to the context of the case?"
+    "I see a browser history record...what does it mean to the context of the case?"
     
-    - "This file was deleted at 3 PM, but a registry log shows USB activity at 3:05... suspicious."
+    "This file was deleted at 3 PM, but a registry log shows USB activity at 3:05... suspicious."
     
     
 5. Documentation
 
-    - In forensics, I'll need to know that reporting is as important as finding evidence. Practice documenting EVERYTHING in my findings clearly, step by step, like if I submit it in court.
+   - In forensics, I'll need to know that reporting is as important as finding evidence. Practice documenting EVERYTHING in my findings clearly, step by step, like if I submit it in court.
