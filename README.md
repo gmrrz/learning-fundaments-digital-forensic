@@ -36,4 +36,4 @@ For example:
     
 5. Documentation
 
-   - In forensics, I'll need to know that reporting is as important as finding evidence. Practice documenting EVERYTHING in my findings clearly, step by step, like if I submit it in court.
+- In forensics, I'll need to know that reporting is as important as finding evidence. Practice documenting EVERYTHING in my findings clearly, step by step, like if I submit it in court.
