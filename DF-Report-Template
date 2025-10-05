@@ -87,6 +87,7 @@ sha256sum /images/usb001.img
 Formatting Tips
 
 - Use headdings and tables to organize
+- Keep hashes and filenames in monospaced font for clarity
 - Keep formatting consistent (expecially dates, hash types)
 - Avoid speculation - stick to facts and supported findings
 - Use timestamps in ISO format: YYYY-MM-DD HH:MM:SS
