@@ -1,0 +1,94 @@
+Digital Forensic Report Template
+
+1. Case Information
+
+- Case Number [DF-2025-001]
+- Investigator [your name]
+- Date of Acquisition [2025-10-03]
+- Report Date [2025-10-05]
+- Description [Analysis of suspect USB drive]
+- Examiner Contact [Email/Department]
+
+2. Evidence Summary
+
+| Item # | Description     | Make/Model     | Serial Number | Capacity |
+| ------ | --------------- | -------------- | ------------- | -------- |
+| 001    | USB Flash Drive | SanDisk Cruzer | 5AZ3KJ2X      | 32 GB    |
+
+- Seized From: John Doe [suspect]
+- Received by: Jane Smith, Lab Technician
+- Acquisition Tool Used: dd (Disk Dump), verified with sha256sum
+- Write Blocker: Yes /
+
+3. Cryptographic Hash Values
+
+| Item                          | Hash Algorithm | Hash Value (SHA-256)                                               |
+| ----------------------------- | -------------- | ------------------------------------------------------------------ |
+| Original Media (Device)       | SHA-256        | `3a7bd3e2360a4e0b8f2c6c1ef12ecb1a2f9fd4c8c742c290fe5db9dcb7aa0f5c` |
+| Forensic Image (`usb001.img`) | SHA-256        | `3a7bd3e2360a4e0b8f2c6c1ef12ecb1a2f9fd4c8c742c290fe5db9dcb7aa0f5c` |
+| Match?                        | ✅ Yes          |                                                                    |
+
+- Use monospaced fonts (Courier New, Consola) for hashes
+
+4. Acquisition Details
+
+- Method: Physical imaging using dd with hash verification
+- Command used:
+    - dd if=/dev/sdb of=/images/usb001.img bs=4M conv=sync,noerror
+sha256sum /images/usb001.img
+- Storage Location: /cases/DF-2025-001/
+- Access Controls: Image stored read-only with audit logging enabled
+
+4. Analysis Summary
+
+- Tools used:
+    - Autopsy
+    - Bulk Extractor
+    - hashdeep
+    - exiftool
+    
+- Key FindingsL
+    - Recovered Deleted files (IMG_0032.jpg)
+    - Located suspicious document: password.docx
+    - Timestamps confirmed recent access
+    - Metadata shows edits by user "john_doe"
+    
+6. File Hash Table:
+
+| File Name        | SHA-256 Hash                 |
+| ---------------- | ---------------------------- |
+| `passwords.docx` | `af7438...`                  |
+| `IMG_0032.jpg`   | `cfe83c...`                  |
+| `malware.exe`    | `*** Matched VirusTotal ***` |
+
+7. Timeline:
+
+| Timestamp        | Event                          |
+| ---------------- | ------------------------------ |
+| 2025-09-30 22:10 | File `passwords.docx` modified |
+| 2025-09-30 22:13 | USB last accessed              |
+| 2025-10-01 10:42 | USB seized by officers         |
+
+8. Conclusion:
+
+- Summarize:
+    - Whether evidence supports or refutes a claim
+    - Data integrity status
+    - Recomendations (future investigation, malware analysis, etc)
+
+9. Appendices
+
+- Full file listing
+- Raw tool outputs logs
+- Screenshots (from Autopsy or hex viewers, etc)
+- Hashdeep output
+- Chain of custody form (scanned or table)
+
+Formatting Tips
+
+- Use headdings and tables to organize
+- Keep formatting consistent (expecially dates, hash types)
+- Avoid speculation - stick to facts and supported findings
+- Use timestamps in ISO format: YYYY-MM-DD HH:MM:SS
+- Store your document as PDF (to lock formatting) and archive it with your case folder
+
