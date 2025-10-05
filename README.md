@@ -25,9 +25,9 @@
 
 4. Learn how to analytically think
 
-Tools will parse data for me, but I'll need to interpret it.
+- Tools will parse data for me, but I'll need to interpret it.
 
-For example:
+- For example:
 
     "I see a browser history record...what does it mean to the context of the case?"
     
