@@ -1,0 +1,94 @@
+What is Chain of Custody (CoC)?
+
+Definition:
+
+- A documented and unbroken record showing who collected, handled, transferred, analyzed, or stored evidence from the moment it was discovered until it is presented in court.
+
+Purpose:
+
+- Ensure integrity and authenticity of evidence.
+
+- Prove that evidence hasn't been tampered with, altered, or replaced.
+
+-----------------------------------------------------------------
+
+Key Principles of Evidence Handling
+
+Identification:
+
+- Clearly mark what is evidence (file, USB, disk, RAM dump).
+
+- Assign a unique identifier or case number.
+
+Collection:
+
+- Use forensically sound methods (disk imaging with dd or FTK Imager).
+
+- Avoid altering the original device - idenally, work on bit-for-bit copies.
+
+Preservation:
+
+- Keep evidence in secure containers (bags, lockers, or encrypted storage).
+
+- Maintain write-protection for disks, avoid booting from the target machine if possible.
+
+Documentation
+
+- Record who handled it, when, where, and what was done.
+
+- Log each action with timestamps.
+
+Transfer
+
+- When moving evidence between people or locations, update the chain of custody log.
+
+- Ensure sealed packaging and signatures to confirm integrity.
+
+Analysis
+
+- Always analyze copies, NEVER originals.
+
+- Document all tools, commands, and methods used.
+
+Storage
+
+- Evidence should be stored securely(locked cabinets, restricted access, environmental control).
+
+- Maintain proper labeling and logs until legal proceedings conclude.
+
+-----------------------------------------------------------------
+
+Chain of Custody Form Example
+
+| Item ID | Description               | Collected By | Date/Time        | Location    | Transfer/Action      | Received By | Signature |
+| ------- | ------------------------- | ------------ | ---------------- | ----------- | -------------------- | ----------- | --------- |
+| USB001  | USB drive containing logs | Officer A    | 10/06/2025 14:30 | Crime scene | Sealed & transported | Officer B   | ✅         |
+
+-----------------------------------------------------------------
+
+Key Points to Remember for Forensics
+
+- Original evidence should never be modified.
+
+- Every handoff must be logged.
+
+- Digital evidence is fragile: even copying RAM or disk incorrectly can break integrity.
+
+- Hashing (MD5, SHA-256) is used to verify evidence hasn't changed.
+
+Example workflow:
+
+- Arrive at a scene -> Identify & seize computer
+
+- Photograph & document -> Label as evidence
+
+- Place in Faraday bag or write-protect drive
+
+- Transport to lab -> Log transfer in CoC form
+
+- Make bit-for-bit copy -> Analyze copy
+
+- Keep original untouched -> Secure storage
+
+- Present findings -> CoC form shows integrity
+
