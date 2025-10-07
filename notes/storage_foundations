@@ -1,0 +1,80 @@
+
+Ram (Random Access Memory)
+
+What is it:
+
+- Volatile memory used by the CPU for active processes.
+
+- Data is lost when the power if off.
+
+- Extremely fast compared disks.
+
+What kind of evidence lives in here:
+
+- Open documents, browser sessions, chat messages in memory.
+
+- Encryption keys or passwords stored temporarily by programs.
+
+Network session data (packets in buffers).
+
+Key forensics note:
+
+- Ram is ephemeral - if you shut down the machine, it's gone.
+
+- Tools like Volatility or Rekall can dump RAM for analysis.
+
+----------------------------------------------------------------------------
+
+Disk (HDD/SS, presistent storage)
+
+What it is:
+
+- Non-volatile storage - keeps data when powered off.
+
+- Slower than RAM buy huge in capacity.
+
+What kind of evidence lives here:
+
+- Files, folders, emails, logs, database.
+
+- Deleted files (until overwritten).
+
+- Installed software, system logs, browser history, artifacts.
+
+File system matters:
+
+- NTFS, ext4, APFS, FAT32 all store data differently.
+
+- Deleted data may lingers.
+
+Key forensics note:
+
+- Most traditional forensic evidence comes from disks.
+
+- Disk imaging is common: creates a bit-for-bit copy for analysis.
+
+----------------------------------------------------------------------------
+
+Cache (CPU, dis, browser, etc.)
+
+What it is:
+
+- Small, fast storage used to temporarily speed up access.
+
+- Examples: CPU L1/L2/L3 cache, disk cache, browser cache.
+
+- Often volatile like RAM, but sometimes written to disk.
+
+What kind of evidence lives here:
+
+- Recent computations in CPU cache (rare to access in practice).
+
+- Browser cache: copies of web pages, images, scripts.
+
+- Disk cache: recentl read/written files may be stored temporarily for speed.
+
+Key forensics note:
+
+- Cache can hold transient evidence that never makes it to disk.
+
+- CPU cache is usually impractical to capture in standard investigations.

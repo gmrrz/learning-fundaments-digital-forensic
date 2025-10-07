@@ -3,7 +3,7 @@
 Learn about how data should be stored on disks
 
 FAT32 - Windows, USB drives, cameras, cross-platform - Very compatible, but old; small file/volume limits
-
+    
 NTFS - Windows PCs - Modern, secure, supports large files, permissions, journaling
 
 ext4 - Linux - Efficient, fast, supports large files, permissions, journaling
@@ -59,4 +59,4 @@ Summary
 
 Deleted  =/= "gone". It means the OS stopped keeping track of the file and marked its space are reusable. The data remains until gets overwritten, unless SSD TRIM wipes it earlier
 
-
+----------------------------------------------------------------------------
