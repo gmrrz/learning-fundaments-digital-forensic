@@ -36,4 +36,16 @@ The reponse kit:
 
     - Software security keys (virtualhere)
 
- 
+ See where df tools are reliable: https://www.nist.gov/itl/ssd/software-quality-group/computer-forensics-tool-testing-program-cftt
+
+    - Use two or more df tools to validate that the data/findings are accurate
+
+Open Source foresenic tools:
+
+    - Autopsy 
+
+    - Sift workstation
+
+    - Paladin Forensic Suite
+
+    - CaineE
